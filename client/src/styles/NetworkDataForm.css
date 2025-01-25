@@ -1,0 +1,155 @@
+/* General Styling */
+.network-data-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Styling */
+  .network-data-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Button Styling */
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background-color: #2980b9;
+  }
+  
+  /* Results Section Styling */
+  .results {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .results h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .results .prediction {
+    font-weight: bold;
+    color: #e74c3c;
+  }
+  
+  .visualization img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .probabilities {
+    margin-top: 20px;
+  }
+  
+  .probability-item {
+    margin-bottom: 10px;
+  }
+  
+  .probability-item span {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .probability-item progress {
+    width: 100%;
+    height: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  .probability-item progress::-webkit-progress-bar {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+  }
+  
+  .probability-item progress::-webkit-progress-value {
+    background-color: #3498db;
+    border-radius: 5px;
+  }
+  /* Textarea Styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  textarea:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .network-data-form {
+      padding: 15px;
+    }
+  
+    .network-data-form h2 {
+      font-size: 1.5rem;
+    }
+  
+    .results h3 {
+      font-size: 1.2rem;
+    }
+  }
