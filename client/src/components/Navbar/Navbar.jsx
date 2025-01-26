@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
-
+import { useLogin } from '../../contexts/LogingContext';
 const Navbar = () => {
+    const { user,logout } = useLogin();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -19,6 +20,7 @@ const Navbar = () => {
                 <NavLink to="/predict" activeClassName="active">Predict</NavLink>
                 <NavLink to="/about-us" activeClassName="active">About Us</NavLink>
                 <NavLink to="/privacy" activeClassName="active">Privacy</NavLink>
+                {user ? <NavLink to="/login" activeClassName="active" onClick={logout}>Logout</NavLink> : <NavLink to="/login" activeClassName="active">Login</NavLink>}
                 {/* <NavLink to="/contact" activeClassName="active">Contact</NavLink> */}
             </div>
             <div className="navbar-hamburger" onClick={toggleMenu}>

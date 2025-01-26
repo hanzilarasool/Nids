@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 // import { IoEyeOffOutline } from "react-icons/io5";
 // import { IoEyeOutline } from "react-icons/io5";
 import axios from 'axios';
-import "./Register.css";
+
 import { useNavigate } from 'react-router-dom';
+import styles from "./Register.module.css";
+
 const Register = () => {
     const [formData, setFormData] = useState({
         username: '',
@@ -36,39 +38,41 @@ const Register = () => {
     // };
 
     return (
-        <div className="register-container">
-            <h2 className="register-title">Sign Up</h2>
-            <form className="register-form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label className="form-label" htmlFor="username">Username</label>
+        <div className={styles["register-page-container"]}>
+      <div className={styles["register-img-container"]}>
+        <div className={styles["register-container"]}>
+            <h2 className={styles["register-title"]}>Sign Up</h2>
+            <form className={styles["register-form"]} onSubmit={handleSubmit}>
+                <div className={styles["form-group"]}>
+                    <label className={styles["form-label"]} htmlFor="username">Username</label>
                     <input
                         type="text"
                         id="username"
                         name="username"
-                        className="form-input"
+                        className={styles["form-input"]}
                         value={formData.username}
                         onChange={handleChange}
                     />
                 </div>
-                <div className="form-group">
-                    <label className="form-label" htmlFor="email">Email</label>
+                <div className={styles["form-group"]}>
+                    <label className={styles["form-label"]} htmlFor="email">Email</label>
                     <input
                         type="email"
                         id="email"
                         name="email"
-                        className="form-input"
+                        className={styles["form-input"]}
                         value={formData.email}
                         onChange={handleChange}
                     />
                 </div>
-                <div className="form-group">
-                    <label className="form-label" htmlFor="password">Password</label>
+                <div className={styles["form-group"]}>
+                    <label className={styles["form-label"]} htmlFor="password">Password</label>
                     <input
                         // type={showPassword ? "text" : "password"}
                         type='password'
                         id="password"
                         name="password"
-                        className="form-input"
+                        className={styles["form-input"]}
                         value={formData.password}
                         onChange={handleChange}
                     />
@@ -76,11 +80,13 @@ const Register = () => {
                         {showPassword ? <IoEyeOffOutline /> : <IoEyeOutline/>}
                     </button> */}
                 </div>
-                <button type="submit" className="register-button">Create Account</button>
+                <button type="submit" className={styles["register-button"]}>Create Account</button>
             </form>
-            <p className="login-link">
+            <p className={styles["login-link"]}>
                 Already have an account? <Link to="/login">Login</Link>
             </p>
+            </div>
+            </div>
         </div>
     );
 };

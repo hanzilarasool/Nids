@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import axios from 'axios';
 import '../styles/NetworkDataForm.css';
-
+import { useLogin } from '../contexts/LogingContext';
+import { Link } from 'react-router-dom';
 function NetworkDataForm() {
+
+  const { user } = useLogin();
   const [features, setFeatures] = useState('');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -39,6 +42,14 @@ function NetworkDataForm() {
     }
     setLoading(false);
   };
+  if (!user) {
+    return (
+      <div className="network-data-form">
+        <h2>Network Intrusion Detection</h2>
+        <p>Please login to access this feature. <Link to="/login" style={{color:"blue",textDecoration:"underline"}}>Login</Link></p>
+      </div>
+    );
+  }
   return (
     <div className="network-data-form">
       <h2>Network Intrusion Detection</h2>

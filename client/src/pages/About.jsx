@@ -20,7 +20,7 @@ const About = () => {
         <p className="section-description">
           NidTech is a cutting-edge platform developed as part of our Final Year Project (FYP). It integrates our intrusion detection model into a user-friendly web interface, allowing users to upload network traffic data and receive instant threat analysis. NidTech is designed to be scalable, secure, and easy to use, making it an ideal solution for organizations looking to enhance their cybersecurity infrastructure.
         </p>
-      </section>
+      </section> 
 
       {/* Section 3: Our Mission */}
       <section className="about-section">
